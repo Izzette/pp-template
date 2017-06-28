@@ -1,0 +1,10 @@
+# hieradata/common.yaml
+---
+
+# Include class declarations here replacing the empty classes array.
+classes: []
+#classes:
+
+# Include parameters for classes below.
+
+# vim: set ts=2 sw=2 et syn=yaml:

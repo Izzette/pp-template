@@ -1,0 +1,23 @@
+# hieradata/hiera.yaml
+---
+
+version: 4
+
+hierarchy:
+  - name: "Nodes"
+    backend: yaml
+    path: "nodes/%{trusted.certname}"
+
+  - name: "Exported JSON nodes"
+    backend: json
+    paths:
+      # Puppet checks these in order. Even though this is a single
+      # item in the hierarchy, it acts like multiple hierarchy levels.
+      - "nodes/%{trusted.certname}"
+      - "insecure_nodes/%{facts.fqdn}"
+
+  - name: "Common"
+    backend: yaml
+    path: "common.yaml"
+
+# vim: set ts=2 sw=2 et syn=yaml:
