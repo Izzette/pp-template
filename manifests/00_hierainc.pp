@@ -1,6 +1,6 @@
 # manifests/00_hierainc.pp
 
 # Include classes defined in hiera.
-hiera_include('classes')
+lookup('classes', Array[String], 'unique', []).include
 
 # vim: set ts=2 sw=2 et syn=puppet:

@@ -1,8 +1,7 @@
 # hieradata/common.yaml
 ---
 
-# Include class declarations here replacing the empty classes array.
-classes: []
+# Include class declarations here.
 #classes:
 
 # Include parameters for classes below.
