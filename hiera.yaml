@@ -1,0 +1,19 @@
+# hiera.yaml
+---
+
+version: 4
+
+hierarchy:
+  - name: "Nodes"
+    backend: "yaml"
+    path: "nodes/%{trusted.certname}"
+
+  - name: "Virtual"
+    backend: "yaml"
+    path: "virtual/%{facts.virtual}"
+
+  - name: "Common"
+    backend: "yaml"
+    path: "common"
+
+# vim: set ts=2 sw=2 et syn=yaml:
